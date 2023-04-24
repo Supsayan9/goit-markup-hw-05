@@ -644,3 +644,6 @@ header {
 .menu-link:focus::after {
   background-color: #404bbf;
 }
+.media-footer {
+  margin-right: 120px;
+}
