@@ -345,7 +345,7 @@ header {
 }
 .customers-link {
   border: 1px solid #8e8f99;
-  border-radius: зі значенням 4px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -361,6 +361,7 @@ header {
 .custom-svg {
   fill: currentColor;
 }
+
 /*Футер ---------------------------------------------------------------------- */
 .footer {
   padding: 100px 0;
