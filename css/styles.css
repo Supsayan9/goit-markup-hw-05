@@ -641,14 +641,10 @@ header {
   top: 0;
   left: 0;
   transform: translateY(100%);
-
   width: 100%;
   height: 100%;
   padding: 40px 32px;
-
   display: flex;
-
   background-color: var(--acsent-color);
-
   transition: transform 250ms ease-in-out;
 }
