@@ -580,7 +580,8 @@ header {
   margin-right: 24px;
   margin-left: auto;
   border-radius: 50%;
-  border: none;
+  background: #e7e9fc;
+  border: 1px px solid rgba(0, 0, 0, 0.1);
 }
 /* Modal ---------------------------------------------------------------------- */
 
