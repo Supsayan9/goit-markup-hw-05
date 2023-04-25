@@ -10,7 +10,10 @@
   --nav: #e7e9fc;
   --footer-hover: #31d0aa;
   --accent-text-color: #2196f3;
+  --slow: 250ms;
+  --animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* Головна сторінка */
 body {
   font-family: "Roboto", sans-serif;
@@ -100,13 +103,21 @@ header {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--slow) var(--animation);
 }
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--acsent-color);
+
+.menu-link-current {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--hero-background);
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  transition-property: color;
+  transition: color var(--slow) var(--animation);
 }
 
 .address {
@@ -122,15 +133,19 @@ header {
   letter-spacing: 0.02em;
   padding-bottom: 24px;
   padding-top: 24px;
+  transition-property: color;
+  transition: color var(--slow) var(--animation);
 }
 .contact-list {
   gap: 40px;
   display: flex;
 }
 .menu-link:hover,
-.menu-link:focus {
+.menu-link:focus,
+.menu-link-current {
   color: var(--button-color-hover);
 }
+
 .contacts:hover,
 .contacts:focus {
   color: var(--button-color-hover);
@@ -181,6 +196,9 @@ header {
   border-radius: 4px;
   color: var(--bg-color);
   cursor: pointer;
+  transition: background-color var(--slow) var(--animation),
+    box-shadow var(--slow) var(--animation),
+    border-radius var(--slow) var(--animation);
 }
 .button:hover,
 .button:focus {
@@ -352,6 +370,8 @@ header {
   color: #8e8f99;
   height: 100%;
   border-radius: 4px;
+  transition: color var(--slow) var(--animation),
+    border var(--slow) var(--animation);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -413,6 +433,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color var(--slow) var(--animation);
 }
 .media-links-footer:hover,
 .media-links-footer:focus {
@@ -437,6 +458,9 @@ header {
   padding: 12px 24px;
   color: var(--button-color-normal);
   cursor: pointer;
+  transition: color var(--slow) var(--animation),
+    background-color var(--slow) var(--animation),
+    box-shadow var(--slow) var(--animation);
 }
 .buttons:hover,
 .buttons:focus {
@@ -444,7 +468,6 @@ header {
   background: var(--button-color-hover);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
   border: none;
   border: 1px solid transparent;
 }
@@ -510,6 +533,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color var(--slow) var(--animation);
 }
 .media-links:hover,
 .media-links:focus {
@@ -562,13 +586,13 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 408px;
-  min-height: 567px;
+  min-height: 584px;
   background: var(--bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--slow) cubic-bezier var(--animation),
+    transform var(--slow) cubic-bezier var(--animation);
 }
 
 .modal-btn {
@@ -581,9 +605,21 @@ header {
   margin-right: 24px;
   margin-left: auto;
   border-radius: 50%;
-  background: #e7e9fc;
-  border: 1px px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  color: var(--hero-background);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color var(--slow) var(--animation),
+    background-color var(--slow) var(--animation),
+    border var(--slow) var(--animation);
 }
+
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: var(--bg-color);
+  border: 1px transparent;
+  background-color: var(--button-color-hover);
+}
+
 /* Modal ---------------------------------------------------------------------- */
 
 .is-hidden {
@@ -620,7 +656,7 @@ header {
 .overlay-text {
   color: #f4f4fd;
 }
-.menu-link::after {
+.menu-link-current::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -634,14 +670,8 @@ header {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--button-color-normal);
-}
-
-.menu-link.active::after,
-.menu-link:hover::after,
-.menu-link:focus::after {
+.menu-link-current::after,
+.menu-link-current::after {
   background-color: #404bbf;
 }
 .media-footer {
