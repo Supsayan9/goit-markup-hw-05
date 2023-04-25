@@ -596,13 +596,14 @@ header {
 }
 
 .modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 24px;
   height: 24px;
-  margin-top: 24px;
-  margin-right: 24px;
   margin-left: auto;
   border-radius: 50%;
   background-color: #e7e9fc;
@@ -676,4 +677,37 @@ header {
 }
 .media-footer {
   margin-right: 120px;
+}
+.input-footer {
+  font-size: 12px;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--color-navy-blue);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  outline: none;
+}
+.sub-button {
+  background-color: var(--button-color-normal);
+  color: var(--bg-color);
+}
+.style-button {
+  cursor: pointer;
+  border: 0 none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.04em;
+}
+.sub {
+  margin-left: auto;
+}
+.sub-icon {
+  margin-left: 16px;
+  fill: currentColor;
 }
