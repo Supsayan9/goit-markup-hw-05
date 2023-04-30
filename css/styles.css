@@ -676,38 +676,50 @@ header {
   background-color: #404bbf;
 }
 .media-footer {
-  margin-right: 120px;
+  margin-right: 80px;
 }
 .input-footer {
-  font-size: 12px;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.6);
-  background-color: var(--color-navy-blue);
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: block;
   width: 264px;
   height: 40px;
-  padding: 8px 16px;
-  outline: none;
-}
-.sub-button {
-  background-color: var(--button-color-normal);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
   color: var(--bg-color);
-}
-.style-button {
-  cursor: pointer;
-  border: 0 none;
+  background-color: var(--hero-background);
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+
+.sub-button {
+  display: flex;
+  width: 165px;
+  height: 40px;
+  gap: 16px;
+  padding: 8px 24px 8px 24px;
+  margin-left: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Roboto", sans-serif;
   letter-spacing: 0.04em;
+  color: var(--bg-color);
+  background: var(--button-color-normal);
+  border-radius: 4px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
 }
-.sub {
-  margin-left: auto;
-}
+
 .sub-icon {
   margin-left: 16px;
   fill: currentColor;
+}
+.sub {
+  width: 453px;
+  height: 80px;
+}
+.form-footer {
+  display: flex;
 }
